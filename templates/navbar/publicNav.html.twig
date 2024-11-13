@@ -1,0 +1,27 @@
+
+<link rel="stylesheet" href="{{asset('css/navbar.css')}}">
+
+<nav class="navbar">
+    <div class="logo-img">
+        {# <a class="navbar-brand text-info" href=""><img src="{{asset('css/images/logo.png')}}" alt="logo"></a> #}
+        <a href=""><img src="{{asset('css/images/logo.png')}}" class="logo-img"></a>
+    </div>
+    <div class="nav-links">
+        <a href="#" class="nav-item">ACCUEIL</a>
+        <a href="#" class="nav-item">VOITURES</a>
+        <a href="#" class="nav-item">À PROPOS</a>
+        <a href="#" class="nav-item">CONTACT</a>
+    </div>
+    <div class="menu-toggle" onclick="toggleDropdown()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu">
+        <a href="#" class="dropdown-item">Information 1</a>
+        <a href="#" class="dropdown-item">Information 2</a>
+        <a href="#" class="dropdown-item">Information 3</a>
+    </div>
+</nav>
+
+<script src="script/publicNav.js"></script>

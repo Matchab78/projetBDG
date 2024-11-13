@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccueilController!{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/acc.css')}}">
+
+{% endblock %}
+
+
+{% block body %}
+<div class="image-container">
+    <div class="image-box">
+        <img width="100%" src="{{ asset('css/images/imgacc.png') }}" alt="Image 1">
+        <span class="image-text">Texte pour l'image 1</span>
+    </div>
+    <div class="image-box">
+        <img width="100%" src="{{ asset('css/images/imgacc.png') }}" alt="Image 1">
+        <span class="image-text">Texte pour l'image 1</span>
+    </div>
+    <div class="image-box">
+        <img width="100%" src="{{ asset('css/images/imgacc.png') }}" alt="Image 1">
+        <span class="image-text">Texte pour l'image 1</span>
+    </div>
+</div>
+{% endblock %}

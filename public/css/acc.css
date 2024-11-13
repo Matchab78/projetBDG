@@ -1,0 +1,13 @@
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* fond semi-transparent */
+    padding: 10px;
+    border-radius: 5px;
+}
