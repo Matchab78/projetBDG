@@ -1,4 +1,20 @@
+/* CSS de base */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /*Empêcher le défilement normal */
+}
 
+/* Assurer que chaque section prend toute la hauteur de l'écran */
+/* Assurer que chaque section prend toute la hauteur de l'écran */
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    /* position: relative; */
+    overflow: hidden;
+    transition: transform 0.8s ease-out;  /* Réduire la durée de la transition pour plus de fluidité */
+}
 
 .image-text {
     font-family: 'ADLaM Display';
