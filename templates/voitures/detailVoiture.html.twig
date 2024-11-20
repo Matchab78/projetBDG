@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail Voiture{% endblock %}
+ {% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('css/detailVoit.css')}}">
+    {% endblock %}
+
+{% block body %}
+<div class="image-container">
+    <div class="image-box">
+        <span class="image-text">CACA 2.0</span><br>
+        <span class="image-text">CACA 2.1</span><br>
+        <span class="image-text">CACA 2.2</span>
+    </div>
+</div>
+      {# <div class="car-list">
+    {% for voiture in voitures %}
+        <div class="car-item">
+            <h2>{{ voitures.description }}</h2>
+            <img src="{{ asset('uploads/' ~ voitures.image) }}" alt="{{ voiture.description }}" class="car-image">
+            <div class="car-stats">
+                <div>
+                    <p>{{ voitures.vitesse }}: Vitesse Max</p>
+                    <p>{{ voitures.chevaux }} cv</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+</div> #}
+{% endblock %}

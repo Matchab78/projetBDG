@@ -28,7 +28,7 @@ class Voitures
     #[ORM\Column(type: 'integer', nullable: true)]
     private $acceleration;
 
-    #[ORM\Column(type: 'blob', nullable: true)]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $image;
 
     #[ORM\Column(type: 'integer', nullable: true)]
@@ -52,13 +52,13 @@ class Voitures
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $Co2;
 
-    #[ORM\Column(type: 'blob')]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $image2;
 
-    #[ORM\Column(type: 'blob')]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $image3;
 
-    #[ORM\Column(type: 'blob')]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $image4;
 
     public function getId(): ?int
