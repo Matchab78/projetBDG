@@ -9,14 +9,14 @@
 
 
 {% block body %}
+<section>
 <div class="image-container">
     <div class="image-box">
         <img width="100%" src="{{ asset('css/images/imgacc.png') }}" alt="Image 1">
-        <span class="image-text">Texte pour l'image 1</span>
     </div>
 </div>
-
-
+</section>
+<section>
         <div class="widget row">
         <div class="col-2"></div>
             <div class="col-4">
@@ -43,5 +43,8 @@
             <div class="col-2"></div>
 
         </div>
+
+</section>
+<script src="{{asset('script/fullpage.js')}}"></script>
 
 {% endblock %}
