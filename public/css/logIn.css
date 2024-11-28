@@ -47,7 +47,7 @@ body {
     font-weight: normal;
     font-size: 24px;
     text-align: center;
-    color: rgb(255,215,100);  
+    color: #f4d03f;  
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
     margin-bottom: 40px;
 }
@@ -73,7 +73,7 @@ body {
 }
 
 .button {
-    background-color: rgb(255,215,100);
+    background-color: #f4d03f;
     height: 40px;
     border-radius: 20px;
     border: none;
@@ -86,7 +86,7 @@ body {
 }
 
 .button:hover {
-    background-color: rgb(245,205,90);
+    background-color: #f4d03f;
 }
 
 .forgot-password {
@@ -102,6 +102,6 @@ body {
 }
 
 .forgot-password a:hover {
-    color: rgb(255,215,100);
+    color: #f4d03f;
 }
 

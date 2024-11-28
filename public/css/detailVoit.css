@@ -1,15 +1,30 @@
-body {
+html, body {
     font-family: 'Noto Sans', sans-serif;
     height: 100vh;
     display: flex;
     justify-content: flex-start; /* Pour placer le texte sur la gauche */
     align-items: center;
-    background-image: url('images/huracan1.jpeg'); /* Chemin de l'image */
+    background-image: url('images/huracan1.jpeg'); 
+    /* background-image: url('images/huracan2.jpg');Chemin de l'image */ 
     background-size: cover; /* L'image couvre tout l'écran */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
-  }
-  
+    /* animation: slideshow 10s infinite; Animation en boucle */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /*Empêcher le défilement normal */
+}
+
+/* Assurer que chaque section prend toute la hauteur de l'écran */
+/* Assurer que chaque section prend toute la hauteur de l'écran */
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    /* position: relative; */
+    overflow: hidden;
+    transition: transform 0.8s ease-out;  /* Réduire la durée de la transition pour plus de fluidité */
+}
   
   .content {
     text-align: left;
@@ -46,3 +61,71 @@ body {
     background-color: #f4d03f; 
 }
 
+
+/* stats */
+.stats-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.0); /* Transparent background */
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.stats-container {
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+.stats-container h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.stat {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 22px;
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #A36BFD, #6B8AEB); /* Dégradé de la couleur A36BFD à 6B8AEB */
+  width: 0%; /* animation */
+  transition: width 2s ease-out; /* largeur anim */
+}
+
+.value {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Description Section */
+.description {
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ddd;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 50px;
+  margin-bottom: 50px;
+}

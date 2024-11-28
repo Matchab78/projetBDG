@@ -15,23 +15,57 @@
     <h1 class="title">Lamborghini Huracan</h1>
 </div>
 
-
-
-
-      {# <div class="car-list">
-    {% for voiture in voitures %}
-        <div class="car-item">
-            <h2>{{ voitures.description }}</h2>
-            <img src="{{ asset('uploads/' ~ voitures.image) }}" alt="{{ voiture.description }}" class="car-image">
-            <div class="car-stats">
-                <div>
-                    <p>{{ voitures.vitesse }}: Vitesse Max</p>
-                    <p>{{ voitures.chevaux }} cv</p>
+<div class="stats-section">
+        <div class="stats-container">
+            <div class="stat">
+                <span class="label">Vitesse max</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
                 </div>
+                <span class="value">370km/h</span>
+            </div>
+            <div class="stat">
+                <span class="label">Accélération</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%;"></div>
+                </div>
+                <span class="value">0 à 100 en 3.2</span>
+            </div>
+            <div class="stat">
+                <span class="label">Puissance</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+                <span class="value">580</span>
             </div>
         </div>
-        <hr>
-    {% endfor %}
-</div> #}
+    </div>
+
+    <div class="description">
+            <p>
+                Découvrez la Lamborghini Huracán, une supercar de rêve qui incarne puissance, précision et design audacieux. Équipée d'un moteur V10 atmosphérique de 5.2 litres, la Huracán délivre une puissance impressionnante de 580 chevaux, pour des accélérations fulgurantes qui vous propulsent de 0 à 100 km/h en moins de 3 secondes.
+            </p>
+            <p>
+                Conçue pour offrir une expérience de conduite pure et palpitante, elle associe la vitesse exceptionnelle à une maniabilité hors pair grâce à une transmission intégrale intelligente et une suspension de haute performance.
+            </p>
+            <p>
+                Son design est une œuvre d'art qui ne passe pas inaperçue : lignes tranchantes, silhouette basse et aérodynamique, phares LED au regard perçant, et une palette de couleurs personnalisables qui la rendent unique.
+            </p>
+        </div>
+
+
+    <script>
+        // Script to animate progress bars
+        document.addEventListener('DOMContentLoaded', () => {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach((bar) => {
+                const targetWidth = bar.style.width; // Get the width from the style
+                bar.style.width = '0'; // Start from 0
+                setTimeout(() => {
+                    bar.style.width = targetWidth; // Animate to target width
+                }, 500); // Delay to make the animation smooth
+            });
+        });
+    </script>
 {% endblock %}
 
