@@ -4,6 +4,7 @@ html, body {
     padding: 0;
     height: 100%;
     overflow: hidden; /*Empêcher le défilement normal */
+    background-color: black;
 }
 
 /* Assurer que chaque section prend toute la hauteur de l'écran */
@@ -14,6 +15,18 @@ section {
     /* position: relative; */
     overflow: hidden;
     transition: transform 0.8s ease-out;  /* Réduire la durée de la transition pour plus de fluidité */
+    background-color: black;
+
+}
+
+section.voit {
+    height: 50vh;
+    scroll-snap-align: start;
+    /* position: relative; */
+    overflow: hidden;
+    transition: transform 0.8s ease-out;  /* Réduire la durée de la transition pour plus de fluidité */
+    background-color: black;
+
 }
 
 .image-text {
