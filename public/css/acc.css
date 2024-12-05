@@ -72,6 +72,14 @@ p{
     color:white;
     font-family: 'ADLaM Display';
 }
+/* 
+.car-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
 
-
+.car-section:nth-child(even) {
+    flex-direction: row-reverse; Alterne l'ordre 
+} */
 
