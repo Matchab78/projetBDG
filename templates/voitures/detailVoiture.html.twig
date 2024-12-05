@@ -1,72 +1,75 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Détail Voiture{% endblock %}
- {% block stylesheets %}
-        <link rel="stylesheet" href="{{asset('css/detailVoit.css')}}">
-        <script src="{{asset('script/fullpage.js')}}"></script>
-    {% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/detailVoit.css') }}">
+{% endblock %}
 
 {% block body %}
 
-<div class="content">
-    <div class="horizontal-line-container">
-        <div class="horizontal-line"></div>
+<div class="hero-section">
+<div class="image-container">
+    <section class="page" id="page1">
+        <img src="{{ asset('css/images/huracan1.jpeg') }}" alt="Lamborghini Huracan" class="background-image">
+    </section>
+</div>
+    <div class="overlay">
         <span class="subtitle">DÉCOUVREZ</span>
+        <h1 class="title">Lamborghini Huracan</h1>
+
+{# <div class="image-container">
+    <section class="page" id="page2">
+        <img src="{{ asset('css/images/huracan2.jpg') }}" alt="Lamborghini Huracan" class="background-image">
+    </section>
+</div> #}
+{# <section class="page" id="page1">
+    <img src="{{ asset('css/images/huracan2.jpg') }}" alt="Lamborghini Huracan" class="background-image">
+</section> #}
+
+        {# <div class="stats-section">
+            <div class="stats-container">
+                <div class="stat">
+                    <span class="label">Vitesse max</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                    <span class="value">260km/h</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Accélération</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                    <span class="value">0 à 100 en 3.4s</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Puissance</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <span class="value">610 ch</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="description">
+            <p>Découvrez la Lamborghini Huracán, une supercar de rêve...</p>
+        </div> #}
     </div>
-    <h1 class="title">Lamborghini Huracan</h1>
 </div>
 
-<div class="stats-section">
-        <div class="stats-container">
-            <div class="stat">
-                <span class="label">Vitesse max</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 80%;"></div>
-                </div>
-                <span class="value">370km/h</span>
-            </div>
-            <div class="stat">
-                <span class="label">Accélération</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 75%;"></div>
-                </div>
-                <span class="value">0 à 100 en 3.2</span>
-            </div>
-            <div class="stat">
-                <span class="label">Puissance</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 70%;"></div>
-                </div>
-                <span class="value">580</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="description">
-            <p>
-                Découvrez la Lamborghini Huracán, une supercar de rêve qui incarne puissance, précision et design audacieux. Équipée d'un moteur V10 atmosphérique de 5.2 litres, la Huracán délivre une puissance impressionnante de 580 chevaux, pour des accélérations fulgurantes qui vous propulsent de 0 à 100 km/h en moins de 3 secondes.
-            </p>
-            <p>
-                Conçue pour offrir une expérience de conduite pure et palpitante, elle associe la vitesse exceptionnelle à une maniabilité hors pair grâce à une transmission intégrale intelligente et une suspension de haute performance.
-            </p>
-            <p>
-                Son design est une œuvre d'art qui ne passe pas inaperçue : lignes tranchantes, silhouette basse et aérodynamique, phares LED au regard perçant, et une palette de couleurs personnalisables qui la rendent unique.
-            </p>
-        </div>
-
-
-    <script>
-        // Script to animate progress bars
-        document.addEventListener('DOMContentLoaded', () => {
-            const progressBars = document.querySelectorAll('.progress');
-            progressBars.forEach((bar) => {
-                const targetWidth = bar.style.width; // Get the width from the style
-                bar.style.width = '0'; // Start from 0
-                setTimeout(() => {
-                    bar.style.width = targetWidth; // Animate to target width
-                }, 500); // Delay to make the animation smooth
-            });
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const progressBars = document.querySelectorAll('.progress');
+        progressBars.forEach(bar => {
+            const targetWidth = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+                bar.style.width = targetWidth;
+            }, 500);
         });
-    </script>
-{% endblock %}
+    });
+</script>
 
+{% endblock %}
