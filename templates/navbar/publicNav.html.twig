@@ -18,10 +18,11 @@
         <div class="bar"></div>
     </div>
     <div class="dropdown-menu" id="dropdown-menu">
-        <a href="#" class="dropdown-item">Information 1</a>
-        <a href="#" class="dropdown-item">Information 2</a>
+        <a href="{{ path('app_admin_voitures_index') }}" class="dropdown-item">Admin voiture</a>
+        <a href="{{ path('app_admin_evenement_index') }}" class="dropdown-item">Admin event</a>
         <a href="#" class="dropdown-item">Information 3</a>
     </div>
 </nav>
 
 <script src="{{asset('script/publicNav.js')}}"></script>
+
