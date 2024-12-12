@@ -1,6 +1,6 @@
 <?php
 namespace App\Controller;
-
+use App\Entity\Voitures;
 use App\Repository\VoituresRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,15 +20,12 @@ class VoituresController extends AbstractController
         ]);
     }
 
-    #[Route('/detailVoiture', name: 'detailVoit')]
-    public function details(VoituresRepository $voituresRepository): Response
+    #[Route('/detailVoiture/{id}', name: 'detailVoit')]
+    public function details(Voitures $voiture)
     {
-        // Récupération de toutes les voitures
-        $voitures = $voituresRepository->findAll();
-
         // Rendu du template avec les données des voitures
         return $this->render('voitures/detailVoiture.html.twig', [
-            'voitures' => $voitures,
+            'voiture' => $voiture
         ]);
     }
 }

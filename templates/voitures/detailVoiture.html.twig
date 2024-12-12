@@ -7,27 +7,22 @@
 {% endblock %}
 
 {% block body %}
-
-<div class="hero-section">
-<div class="image-container">
-    <section class="page" id="page1">
+<section class="hero-section">
+    <div class="image-container">
         <img src="{{ asset('css/images/huracan1.jpeg') }}" alt="Lamborghini Huracan" class="background-image">
-    </section>
-</div>
-    <div class="overlay">
-        <span class="subtitle">DÉCOUVREZ</span>
-        <h1 class="title">Lamborghini Huracan</h1>
+        <div class="overlay">
+            <span class="subtitle">DÉCOUVREZ</span>
+            <h1 class="title">{{ voiture.description }}</h1>
+        </div>
+    </div>
+</section>
 
-{# <div class="image-container">
-    <section class="page" id="page2">
+<section class="hero-section">
+    <div class="image-container">
         <img src="{{ asset('css/images/huracan2.jpg') }}" alt="Lamborghini Huracan" class="background-image">
-    </section>
-</div> #}
-{# <section class="page" id="page1">
-    <img src="{{ asset('css/images/huracan2.jpg') }}" alt="Lamborghini Huracan" class="background-image">
-</section> #}
-
-        {# <div class="stats-section">
+    </div>
+</section>
+         {# <div class="stats-section">
             <div class="stats-container">
                 <div class="stat">
                     <span class="label">Vitesse max</span>
@@ -55,7 +50,7 @@
 
         <div class="description">
             <p>Découvrez la Lamborghini Huracán, une supercar de rêve...</p>
-        </div> #}
+        </div>  #}
     </div>
 </div>
 
