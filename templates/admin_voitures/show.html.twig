@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Voitures{% endblock %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/adminpage.css') }}">
+{% endblock %}
 {% block body %}
     <h1>Voitures</h1>
 
