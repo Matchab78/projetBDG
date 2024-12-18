@@ -52,6 +52,13 @@ body {
   object-fit: cover;
 }
 
+.text_stat {
+  font-size: 2.5rem; /* Taille du texte (ajustez selon vos besoins) */
+  font-weight: bold; /* Met le texte en gras */
+  text-align: center; /* Centre le texte horizontalement si nécessaire */
+  color: rgba(255, 255, 255, 255); /* Assurez-vous que le texte reste lisible */
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -62,9 +69,47 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour lisibilité */
   color: white;
 }
+
+.overlay_stat {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.overlay_config {
+  position: absolute;
+  bottom: 25%;
+  right: 7%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.description_voit {
+  position: absolute; /* Permet de positionner l'élément précisément */
+  top: 50%; /* Centre verticalement l'élément */
+  right: 5%; /* Place l'élément à droite avec une marge de 5% */
+  transform: translateY(-50%); /* Ajuste pour un centrage parfait */
+  font-size: 1.2rem; /* Taille du texte pour une bonne lisibilité */
+  font-weight: bold; /* Texte en gras */
+  color: white; /* Assure une bonne lisibilité */
+  text-align: center; /* Centre le texte à l'intérieur du conteneur */
+  padding: 10px; /* Espace interne autour du texte */
+}
+
 
 .subtitle {
   font-size: 20px;
