@@ -1,0 +1,176 @@
+.navbar {
+  position: fixed; /* Assure qu'elle reste en haut même au défilement */
+  top: 0;
+  left: 0;
+  width: 100%; /* Prend toute la largeur */
+  height: 60px; /* Ajuste la hauteur si nécessaire */
+  background-color: rgba(0, 0, 0, 0); /* Fond semi-transparent */
+  color: white;
+  z-index: 1000; /* Plus élevé que tout autre élément */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  width: 100%; /* Prend toute la largeur de l'écran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  height: 100vh;
+  /* scroll-snap-align: start; */
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* transition: transform 0.8s ease-out;  Réduire la durée de la transition pour plus de fluidité */
+  background-color: black;
+
+}
+
+/* Style global */
+body {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text_stat {
+  font-size: 2.5rem; /* Taille du texte (ajustez selon vos besoins) */
+  font-weight: bold; /* Met le texte en gras */
+  text-align: center; /* Centre le texte horizontalement si nécessaire */
+  color: rgba(255, 255, 255, 255); /* Assurez-vous que le texte reste lisible */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.overlay_stat {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.overlay_config {
+  position: absolute;
+  bottom: 25%;
+  right: 7%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.description_voit {
+  position: absolute; /* Permet de positionner l'élément précisément */
+  top: 50%; /* Centre verticalement l'élément */
+  right: 5%; /* Place l'élément à droite avec une marge de 5% */
+  transform: translateY(-50%); /* Ajuste pour un centrage parfait */
+  font-size: 1.2rem; /* Taille du texte pour une bonne lisibilité */
+  font-weight: bold; /* Texte en gras */
+  color: white; /* Assure une bonne lisibilité */
+  text-align: center; /* Centre le texte à l'intérieur du conteneur */
+  padding: 10px; /* Espace interne autour du texte */
+}
+
+
+.subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f4d03f;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  position: absolute; /* Positionnement absolu */
+  top: 43%;
+  left: 8%;
+}
+.stats-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 800px ;
+}
+
+.stat {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 20px;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #A36BFD, #6B8AEB);
+  width: 0;
+  transition: width 2s ease-out;
+}
+
+.value {
+  font-size: 18px;
+  color: white;
+}
+
+.description {
+  margin-top: 30px;
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 600px;
+}
+
