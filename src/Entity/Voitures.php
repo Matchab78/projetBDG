@@ -22,6 +22,9 @@ class Voitures
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $description;
 
+    #[ORM\Column(type: 'text', length: 255, nullable: true)]
+    private $description_v;
+
     #[ORM\Column(type: 'integer', nullable: true)]
     private $vitesse;
 
@@ -98,6 +101,18 @@ class Voitures
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getDescription_v(): ?string
+    {
+        return $this->description_v;
+    }
+
+    public function setDescription_v(?string $description_v): self
+    {
+        $this->description_v = $description_v;
 
         return $this;
     }

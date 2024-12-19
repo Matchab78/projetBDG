@@ -45,12 +45,7 @@
             </div>
         </div>
         <div class="description_voit">
-            <p> 
-                Découvrez la Lamborghini Huracán, une supercar de rêve qui incarne<br> puissance, précision,
-                et design audacieux. Équipée d'un moteur V10   atmosphérique<br> de 5.2  litres, la Huracán délivre
-                une puissance impressionnante de 640 chevaux,<br> pour des accélérations fulgurantes qui vous propulsent
-                de 0 à 100 km/h en 3.4 secondes.
-            </p>
+            <span>{{voiture.description_v}}</span>
         </div> 
     </div>
 </section>
@@ -63,8 +58,94 @@
             <h1 class="title">Configurez votre {{ voiture.description }} : </h1>
         </div>
     </div>
-</section>
+    <div class="options-panel">
+                <h3 class="options-title">OPTION</h3>
+                
+                <div class="card">
+                    <h4>Intérieur</h4>
+                    <div class="option-choices">
+                        <label class="option-choice">
+                            <input type="radio" name="interior" value="cuir" checked>
+                            <div class="option-content">
+                                <span class="option-name">Cuir</span>
+                                <span class="description">Intérieur en cuir premium</span>
+                                <div class="label">Label</div>
+                            </div>
+                        </label>
+                        <label class="option-choice">
+                            <input type="radio" name="interior" value="alcantara">
+                            <div class="option-content">
+                                <span class="option-name">Alcantara</span>
+                                <span class="description">Finition sportive en alcantara</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <h4>Jante</h4>
+                    <div class="option-choices">
+                        <label class="option-choice">
+                            <input type="radio" name="wheels" value="carbone">
+                            <div class="option-content">
+                                <span class="option-name">Carbone</span>
+                                <span class="description">Jantes en fibre de carbone</span>
+                            </div>
+                        </label>
+                        <label class="option-choice">
+                            <input type="radio" name="wheels" value="acier" checked>
+                            <div class="option-content">
+                                <span class="option-name">Acier</span>
+                                <span class="description">Jantes en acier forgé</span>
+                                <div class="label">Label</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Volant</h4>
+                    <div class="option-choices">
+                        <label class="option-choice">
+                            <input type="radio" name="steering" value="sport" checked>
+                            <div class="option-content">
+                                <span class="option-name">Sport</span>
+                                <span class="description">Volant sport en cuir perforé</span>
+                                <div class="label">Label</div>
+                            </div>
+                        </label>
+                        <label class="option-choice">
+                            <input type="radio" name="steering" value="comfort">
+                            <div class="option-content">
+                                <span class="option-name">Confort</span>
+                                <span class="description">Volant confort en cuir lisse</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Toit</h4>
+                    <div class="option-choices">
+                        <label class="option-choice">
+                            <input type="radio" name="roof" value="carbone" checked>
+                            <div class="option-content">
+                                <span class="option-name">Carbone</span>
+                                <span class="description">Toit en fibre de carbone</span>
+                                <div class="label">Label</div>
+                            </div>
+                        </label>
+                        <label class="option-choice">
+                            <input type="radio" name="roof" value="ouvrant">
+                            <div class="option-content">
+                                <span class="option-name">Ouvrant</span>
+                                <span class="description">Toit ouvrant panoramique</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+</section>
           
     </div>
 </div>
