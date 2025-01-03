@@ -1,67 +1,23 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Voitures{% endblock %}
+{% block title %}Catalogue{% endblock %}
+{% block body %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/catalogue.css') }}">
+<link rel="stylesheet" href="{{asset('css/catalogue.css')}}">
 {% endblock %}
 
-{% block body %}
-<div class="cars-container">
-    {% for voiture in voitures %}
-        <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carte de Vitesse</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="cards-container">
-        <!-- Carte 1 -->
-        <div class="card left">
-            <img src="votre-image1.jpg" alt="Image 1">
-            <div class="progress-container">
-                <div class="label">Vitesse Max:</div>
-                <div class="progress-bar">
-                    <div style="width: 80%;">80 km/h</div>
-                </div>
-                <div class="label">Puissance:</div>
-                <div class="progress-bar">
-                    <div style="width: 65%;">200 CV</div>
-                </div>
-                <div class="label">0 à 100:</div>
-                <div class="progress-bar">
-                    <div style="width: 70%;">7.5s</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Carte 2 -->
-        <div class="card right">
-            <img src="votre-image2.jpg" alt="Image 2">
-            <div class="progress-container">
-                <div class="label">Vitesse Max:</div>
-                <div class="progress-bar">
-                    <div style="width: 90%;">120 km/h</div>
-                </div>
-                <div class="label">Puissance:</div>
-                <div class="progress-bar">
-                    <div style="width: 80%;">300 CV</div>
-                </div>
-                <div class="label">0 à 100:</div>
-                <div class="progress-bar">
-                    <div style="width: 50%;">5.5s</div>
-                </div>
-            </div>
-        </div>
+{% for voiture in voitures %}
+<div class="card">
+    <h2>{{ voiture.description }}</h2>
+    <div class="progress-bar">
+        <div style="width: 80%;"></div>
     </div>
-
-    <script src="catalogue.js"></script>
-</body>
-</html>
+    <p>Speed: {{ voiture.vitesse }} KM/H</p>
+    <div class="progress-bar">
+        <div style="width: 45%;"></div>
+    </div>
+    <p>Horsepower: {{ voiture.chevaux }} CHV</p>
+    <button class="button">Learn More</button>
+</div>
 {% endfor %}
-
-
 {% endblock %}

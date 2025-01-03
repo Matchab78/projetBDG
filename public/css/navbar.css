@@ -71,7 +71,7 @@
 .bar {
     width: 25px;
     height: 3px;
-    background-color: white;
+    /* background-color: white; */
     transition: transform 0.3s, opacity 0.3s;
 }
 .menu-toggle.active .bar:nth-child(1) {
