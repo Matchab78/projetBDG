@@ -2,6 +2,17 @@
 
 {% block title %}Hello RassoController!{% endblock %}
 
+{% block body_class %}page-scrollable{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<style>
+    .page-scrollable .navbar {
+        position: absolute;
+    }
+</style>
+{% endblock %}
+
 {% block body %}
 
 <link rel="shortcut icon" href="favicon.26242483.ico">
