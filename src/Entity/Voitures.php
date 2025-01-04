@@ -19,7 +19,7 @@ class Voitures
     #[ORM\Column(type: 'integer')]
     private $stock;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[ORM\Column(type: 'text', length: 255, nullable: true)]
     private $description;
 
     #[ORM\Column(type: 'integer', nullable: true)]
@@ -50,16 +50,7 @@ class Voitures
     private $conso;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $Co2;
-
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $image2;
-
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $image3;
-
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $image4;
+    private $co2;
 
     public function getId(): ?int
     {
@@ -74,7 +65,6 @@ class Voitures
     public function setPrixV(?int $prixV): self
     {
         $this->prixV = $prixV;
-
         return $this;
     }
 
@@ -86,7 +76,6 @@ class Voitures
     public function setStock(int $stock): self
     {
         $this->stock = $stock;
-
         return $this;
     }
 
@@ -98,7 +87,6 @@ class Voitures
     public function setDescription(?string $description): self
     {
         $this->description = $description;
-
         return $this;
     }
 
@@ -110,7 +98,6 @@ class Voitures
     public function setVitesse(?int $vitesse): self
     {
         $this->vitesse = $vitesse;
-
         return $this;
     }
 
@@ -122,19 +109,17 @@ class Voitures
     public function setAcceleration(?int $acceleration): self
     {
         $this->acceleration = $acceleration;
-
         return $this;
     }
 
-    public function getImage()
+    public function getImage(): ?string
     {
         return $this->image;
     }
 
-    public function setImage($image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
-
         return $this;
     }
 
@@ -146,7 +131,6 @@ class Voitures
     public function setAnnee(?int $annee): self
     {
         $this->annee = $annee;
-
         return $this;
     }
 
@@ -158,7 +142,6 @@ class Voitures
     public function setChevaux(?string $chevaux): self
     {
         $this->chevaux = $chevaux;
-
         return $this;
     }
 
@@ -170,7 +153,6 @@ class Voitures
     public function setMoteur(string $moteur): self
     {
         $this->moteur = $moteur;
-
         return $this;
     }
 
@@ -182,7 +164,6 @@ class Voitures
     public function setCarburant(?string $carburant): self
     {
         $this->carburant = $carburant;
-
         return $this;
     }
 
@@ -194,7 +175,6 @@ class Voitures
     public function setBoiteAuto(?string $boiteAuto): self
     {
         $this->boiteAuto = $boiteAuto;
-
         return $this;
     }
 
@@ -206,55 +186,17 @@ class Voitures
     public function setConso(?string $conso): self
     {
         $this->conso = $conso;
-
         return $this;
     }
 
     public function getCo2(): ?string
     {
-        return $this->Co2;
+        return $this->co2;
     }
 
-    public function setCo2(?string $Co2): self
+    public function setCo2(?string $co2): self
     {
-        $this->Co2 = $Co2;
-
-        return $this;
-    }
-
-    public function getImage2()
-    {
-        return $this->image2;
-    }
-
-    public function setImage2($image2): self
-    {
-        $this->image2 = $image2;
-
-        return $this;
-    }
-
-    public function getImage3()
-    {
-        return $this->image3;
-    }
-
-    public function setImage3($image3): self
-    {
-        $this->image3 = $image3;
-
-        return $this;
-    }
-
-    public function getImage4()
-    {
-        return $this->image4;
-    }
-
-    public function setImage4($image4): self
-    {
-        $this->image4 = $image4;
-
+        $this->co2 = $co2;
         return $this;
     }
 }

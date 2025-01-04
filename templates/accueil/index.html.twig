@@ -4,9 +4,7 @@
 
 {% block stylesheets %}
 <link rel="stylesheet" href="{{asset('css/acc.css')}}">
-
 {% endblock %}
-
 
 {% block body %}
 <section>
@@ -20,27 +18,51 @@
 <section class="voit">
         <div class="widget row">
         <div class="col-2"></div>
-            <div class="col-4">
-                <div>
-                    <p class="nouveaute">Nouveauté</p>
+            {% if loop.index is odd %}
+                <div class="col-4">
+                    <div>
+                        <p class="nouveaute">Nouveauté</p>
+                    </div>
+
+                    <div class="titre">
+                        <h1>{{ voiture.description }}</h1>
+                    </div>
+                    
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, maxime nam earum aliquam ad possimus, voluptatem quasi ipsum eaque modi quisquam cumque harum commodi. Expedita, quis. Doloremque consequuntur tempora praesentium.</p>
+                    </div>
+
+                    <div class="link">
+                        <a href="" class="">j'aime le socola</a>
+                    </div>
                 </div>
 
-                <div class="titre">
-                    <h1>{{ voiture.description }}</h1>
+                <div class="col-4" style="overflow:hidden">
+                    <img width="100%" src="{{ asset('css/images/huracan1.jpeg') }}" alt="Image 1">
                 </div>
-                
-                <div class="description">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, maxime nam earum aliquam ad possimus, voluptatem quasi ipsum eaque modi quisquam cumque harum commodi. Expedita, quis. Doloremque consequuntur tempora praesentium.</p>
+            {% else %}
+                <div class="col-4" style="overflow:hidden">
+                    <img width="100%" src="{{ asset('css/images/huracan1.jpeg') }}" alt="Image 1">
                 </div>
 
-                <div class="link">
-                    <a href="" class="">j'aime le socola</a>
-                </div>
-            </div>
+                <div class="col-4">
+                    <div>
+                        <p class="nouveaute">Nouveauté</p>
+                    </div>
 
-            <div class="col-4" style="overflow:hidden">
-                <img width="100%" src="{{ asset('css/images/huracan1.jpeg') }}" alt="Image 1">
-            </div>
+                    <div class="titre">
+                        <h1>{{ voiture.description }}</h1>
+                    </div>
+                    
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, maxime nam earum aliquam ad possimus, voluptatem quasi ipsum eaque modi quisquam cumque harum commodi. Expedita, quis. Doloremque consequuntur tempora praesentium.</p>
+                    </div>
+
+                    <div class="link">
+                        <a href="" class="">j'aime le socola</a>
+                    </div>
+                </div>
+            {% endif %}
             <div class="col-2"></div>
 
         </div>
