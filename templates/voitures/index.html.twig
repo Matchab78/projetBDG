@@ -1,67 +1,52 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Voitures{% endblock %}
-
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/catalogue.css') }}">
-{% endblock %}
+{% block title %}Catalogue{% endblock %}
 
 {% block body %}
-<div class="cars-container">
-    {% for voiture in voitures %}
-        <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carte de Vitesse</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="cards-container">
-        <!-- Carte 1 -->
-        <div class="card left">
-            <img src="votre-image1.jpg" alt="Image 1">
-            <div class="progress-container">
-                <div class="label">Vitesse Max:</div>
-                <div class="progress-bar">
-                    <div style="width: 80%;">80 km/h</div>
-                </div>
-                <div class="label">Puissance:</div>
-                <div class="progress-bar">
-                    <div style="width: 65%;">200 CV</div>
-                </div>
-                <div class="label">0 à 100:</div>
-                <div class="progress-bar">
-                    <div style="width: 70%;">7.5s</div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Carte 2 -->
-        <div class="card right">
-            <img src="votre-image2.jpg" alt="Image 2">
-            <div class="progress-container">
-                <div class="label">Vitesse Max:</div>
-                <div class="progress-bar">
-                    <div style="width: 90%;">120 km/h</div>
-                </div>
-                <div class="label">Puissance:</div>
-                <div class="progress-bar">
-                    <div style="width: 80%;">300 CV</div>
-                </div>
-                <div class="label">0 à 100:</div>
-                <div class="progress-bar">
-                    <div style="width: 50%;">5.5s</div>
-                </div>
-            </div>
-        </div>
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/catalogue.css')}}">
+{% endblock %}
+
+<div class="search-container">
+    <input type="text" id="search-bar" placeholder="Rechercher une voiture..." onkeyup="filterCards()">
+</div>
+
+{% for voiture in voitures %}
+<div class="card">
+    <h2>{{ voiture.description }}</h2>
+    <img src="{{ asset('path/to/image.jpg') }}" alt="Car Image"> {# il faut au plus vite ajouter les vrai image #} 
+    <div class="progress-bar">
+        <div style="width: 45%;"></div>
     </div>
-
-    <script src="catalogue.js"></script>
-</body>
-</html>
+    <p>Speed: {{ voiture.vitesse }} KM/H</p>
+    <div class="progress-bar">
+        <div style="width: 80%;"></div>
+    </div>
+    <p>Horsepower: {{ voiture.chevaux }} CHV</p>
+    <button class="button">Learn More</button>
+</div>
 {% endfor %}
 
+<script>
 
+//Laisser les commentaire c pour comprendre comment fonctionne la barre de recherche
+/**
+ * Filters the displayed cards based on the search input.
+ * @param {string} searchInput the search input string
+ */
+function filterCards() {
+    const searchInput = document.getElementById('search-bar').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        const cardText = card.textContent.toLowerCase();
+        if (cardText.includes(searchInput)) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
 {% endblock %}
+
