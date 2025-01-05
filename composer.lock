@@ -7582,11 +7582,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< Updated upstream
             "time": "2024-04-23T11:57:27+00:00"
-=======
-            "time": "2024-09-25T14:11:13+00:00"
->>>>>>> Stashed changes
         },
         {
             "name": "symfonycasts/reset-password-bundle",
