@@ -24,7 +24,7 @@
         <div style="width: 80%;"></div>
     </div>
     <p>Horsepower: {{ voiture.chevaux }} CHV</p>
-    <button class="button">Learn More</button>
+    <a href="{{ path('detailVoit', {'id': voiture.id}) }}" class="button" style="text-decoration: none;">Learn More</a>
 </div>
 {% endfor %}
 
@@ -49,4 +49,3 @@ function filterCards() {
 }
 </script>
 {% endblock %}
-
