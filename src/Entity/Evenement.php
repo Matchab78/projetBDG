@@ -31,6 +31,9 @@ class Evenement
     #[ORM\Column(type: 'integer', nullable: true)]
     private $places;
 
+    #[ORM\ManyToOne(inversedBy: 'evenements')]
+    private ?user $createur = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +107,18 @@ class Evenement
     public function setPlaces(?int $places): self
     {
         $this->places = $places;
+
+        return $this;
+    }
+
+    public function getCreateur(): ?user
+    {
+        return $this->createur;
+    }
+
+    public function setCreateur(?user $createur): static
+    {
+        $this->createur = $createur;
 
         return $this;
     }
