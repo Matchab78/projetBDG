@@ -229,7 +229,7 @@ class Voitures
         return $this->marque;
     }
 
-    public function setMarque(?Marque $marque): self
+    public function setMarque(?marque $marque): static
     {
         $this->marque = $marque;
         return $this;
@@ -240,7 +240,7 @@ class Voitures
         return $this->couleur;
     }
 
-    public function setCouleur(?Couleur $couleur): self
+    public function setCouleur(?couleur $couleur): static
     {
         $this->couleur = $couleur;
         return $this;

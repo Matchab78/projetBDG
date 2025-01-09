@@ -44,17 +44,17 @@
                 <td>{{ voiture.conso }}</td>
                 <td>{{ voiture.Co2 }}</td>
                 <td>
-                    <a href="{{ path('app_admin_voitures_show', {'id': voiture.id}) }}">show</a>
-                    <a href="{{ path('app_admin_voitures_edit', {'id': voiture.id}) }}">edit</a>
+                    <a href="{{ path('app_admin_voitures_show', {'id': voiture.id}) }}">montrer</a>
+                    <a href="{{ path('app_admin_voitures_edit', {'id': voiture.id}) }}">modifier</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="15">no records found</td>
+                <td colspan="15">rien trouver</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_voitures_new') }}">Create new</a>
+    <a href="{{ path('app_admin_voitures_new') }}">Crée une voiture</a>
 {% endblock %}
