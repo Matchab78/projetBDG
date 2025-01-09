@@ -16,7 +16,7 @@ body {
     border-collapse: collapse;
     width: 80%; /* Ajustez la largeur du tableau si nécessaire */
     margin: 50px auto; /* Centre horizontalement et espace au-dessus/au-dessous */
-    background-color: #222; /* Fond du tableau */
+    background-color: #ffffff; /* Fond du tableau */
     color: #fff;
     border: 1px solid #444; /* Bordure des cellules */
 }
@@ -24,7 +24,7 @@ body {
 .table th, .table td {
     padding: 12px;
     text-align: left;
-    border: 1px solid #444; /* Bordures des cellules */
+    border: 1px solid #ffffff; /* Bordures des cellules */
 }
 
 .table th {
