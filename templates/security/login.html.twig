@@ -14,7 +14,7 @@
 
         {% if app.user %}
             <div class="mb-3">
-                You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                Vous êtes connecter en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Deconnexion</a>
             </div>
         {% endif %}
             <h1 class="h1">Se connecter</h1>
@@ -37,6 +37,7 @@
             </div>
         #}
         <p class="forgot-password"><a href="">Mot de passe oublié ?</a></p>
+        <p class="forgot-password"><a href="{{ path('app_register') }}">Vous avez deja un compte ? Connectez vous</a></p>
     </form>
 </div>
 {# {{path('app_forgot_password_request')}}  #}
