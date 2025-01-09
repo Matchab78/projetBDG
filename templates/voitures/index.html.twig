@@ -19,9 +19,9 @@
 </div>
 
 {% for voiture in voitures %}
-<div class="card" data-brand="{{ voiture.marque.nom_marque }}">
+<div class="card" data-brand="{{ voiture.marque ? voiture.marque.nom_marque : '' }}">
     <h2>{{ voiture.description }}</h2>
-    <img src="{{ asset('path/to/image.jpg') }}" alt="Car Image"> {# il faut au plus vite ajouter les vrai image #} 
+    <img src="{{ asset(voiture.image) }}" alt="Car Image"> {# il faut au plus vite ajouter les vrai image #} 
     <div class="progress-bar">
         <div style="width: 45%;"></div>
     </div>

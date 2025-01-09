@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9bfad5e1594ef2564c67ae9674259ce",
+    "content-hash": "a5087bf49e9522a1a9aa4eac893c6dba",
     "packages": [
         {
             "name": "amphp/amp",
@@ -9013,60 +9013,53 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2024-09-25T14:11:13+00:00"
-=======
-
-            "time": "2024-09-25T14:11:13+00:00"
-
+            "time": "2024-04-23T11:57:27+00:00"
         },
         {
-            "name": "symfonycasts/reset-password-bundle",
-            "version": "v1.22.0",
+            "name": "symfonycasts/verify-email-bundle",
+            "version": "v1.17.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/SymfonyCasts/reset-password-bundle.git",
-                "reference": "d9cf4395c0a19a3093bc51b10f508b38f98117f5"
+                "url": "https://github.com/SymfonyCasts/verify-email-bundle.git",
+                "reference": "2cb1cd94ca7a65471563a5cb91ddf40e8433844e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SymfonyCasts/reset-password-bundle/zipball/d9cf4395c0a19a3093bc51b10f508b38f98117f5",
-                "reference": "d9cf4395c0a19a3093bc51b10f508b38f98117f5",
+                "url": "https://api.github.com/repos/SymfonyCasts/verify-email-bundle/zipball/2cb1cd94ca7a65471563a5cb91ddf40e8433844e",
+                "reference": "2cb1cd94ca7a65471563a5cb91ddf40e8433844e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": ">=8.1.10",
+                "php": ">=8.1",
                 "symfony/config": "^5.4 | ^6.0 | ^7.0",
                 "symfony/dependency-injection": "^5.4 | ^6.0 | ^7.0",
                 "symfony/deprecation-contracts": "^2.2 | ^3.0",
-                "symfony/http-kernel": "^5.4 | ^6.0 | ^7.0"
+                "symfony/http-kernel": "^5.4 | ^6.0 | ^7.0",
+                "symfony/routing": "^5.4 | ^6.0 | ^7.0"
             },
             "require-dev": {
-                "doctrine/annotations": "^1.0",
-                "doctrine/doctrine-bundle": "^2.8",
-                "doctrine/orm": "^2.13",
-                "phpstan/phpstan": "^1.11.x-dev",
+                "doctrine/orm": "^2.7",
+                "doctrine/persistence": "^2.0",
                 "symfony/framework-bundle": "^5.4 | ^6.0 | ^7.0",
                 "symfony/phpunit-bridge": "^5.4 | ^6.0 | ^7.0"
             },
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
-                    "SymfonyCasts\\Bundle\\ResetPassword\\": "src/"
+                    "SymfonyCasts\\Bundle\\VerifyEmail\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Symfony bundle that adds password reset functionality.",
+            "description": "Simple, stylish Email Verification for Symfony",
             "support": {
-                "issues": "https://github.com/SymfonyCasts/reset-password-bundle/issues",
-                "source": "https://github.com/SymfonyCasts/reset-password-bundle/tree/v1.22.0"
+                "issues": "https://github.com/SymfonyCasts/verify-email-bundle/issues",
+                "source": "https://github.com/SymfonyCasts/verify-email-bundle/tree/v1.17.3"
             },
-            "time": "2024-06-06T11:59:57+00:00"
->>>>>>> dfd9f49a4c2ba9ec5cab05fc5ff4c78948fb323f
+            "time": "2024-12-09T18:44:25+00:00"
         },
         {
             "name": "twig/extra-bundle",
@@ -11510,11 +11503,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
-<<<<<<< HEAD
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
-=======
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
->>>>>>> fc23aa05eaa2c1e626a5f491409d7397bddbcbbd
 }

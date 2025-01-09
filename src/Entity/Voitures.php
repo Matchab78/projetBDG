@@ -52,14 +52,29 @@ class Voitures
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $co2;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $image2;
+    // #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    // private $image2;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $image3;
+    // #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    // private $image3;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $image4;
+    // #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    // private $image4;
+
+    #[ORM\ManyToOne(inversedBy: 'voitures')]
+    private ?Marque $marque = null;
+
+    #[ORM\ManyToOne(inversedBy: 'voitures')]
+    private ?Couleur $couleur = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $catVoitures = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image2 = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image3 = null;
 
     public function getId(): ?int
     {
@@ -209,12 +224,34 @@ class Voitures
         return $this;
     }
 
+    public function getMarque(): ?Marque
+    {
+        return $this->marque;
+    }
+
+    public function setMarque(?Marque $marque): self
+    {
+        $this->marque = $marque;
+        return $this;
+    }
+
+    public function getCouleur(): ?Couleur
+    {
+        return $this->couleur;
+    }
+
+    public function setCouleur(?Couleur $couleur): self
+    {
+        $this->couleur = $couleur;
+        return $this;
+    }
+
     public function getImage2(): ?string
     {
         return $this->image2;
     }
 
-    public function setImage2(?string $image2): self
+    public function setImage2(?string $image2): static
     {
         $this->image2 = $image2;
 
@@ -226,21 +263,9 @@ class Voitures
         return $this->image3;
     }
 
-    public function setImage3(?string $image3): self
+    public function setImage3(?string $image3): static
     {
         $this->image3 = $image3;
-
-        return $this;
-    }
-
-    public function getImage4(): ?string
-    {
-        return $this->image4;
-    }
-
-    public function setImage4(?string $image4): self
-    {
-        $this->image4 = $image4;
 
         return $this;
     }

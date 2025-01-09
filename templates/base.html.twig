@@ -12,8 +12,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('images/logo.png')}}">
         {% block stylesheets %}
-        <link rel="stylesheet" href="{{asset('css/stylesheet.css')}}">
-            {{ encore_entry_link_tags('app') }}
+        {# <link rel="stylesheet" href="{{asset('css/stylesheet.css')}}">
+            {{ encore_entry_link_tags('app') }} #}
         {% endblock %}
 
         {% block javascripts %}
@@ -23,6 +23,14 @@
     </head>
     <body class="{% block body_class %}{% endblock %}">
     {% include 'navbar/publicNav.html.twig' %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+            {% include 'navbar/NavAdmin.html.twig' %}
+        {% elseif is_granted('ROLE_ENTREPRISE') %}
+            {% include 'navbar/publicNav.html.twig' %}
+        {% else %}
+            {% include 'navbar/publicNav.html.twig' %}
+        {% endif %}
         {% block body %}{% endblock %}
     {# {% include 'script/publicNav.js' %} #}
     </body>

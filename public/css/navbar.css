@@ -23,6 +23,10 @@
     width: auto;
 }
 
+/* .co-img{
+    width: 50px;
+} */
+
 .nav-links {
     display: flex;
     flex: 1;
