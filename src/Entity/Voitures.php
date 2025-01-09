@@ -53,10 +53,10 @@ class Voitures
     private $co2;
 
     #[ORM\ManyToOne(inversedBy: 'voitures')]
-    private ?marque $marque = null;
+    private ?Marque $marque = null;
 
     #[ORM\ManyToOne(inversedBy: 'voitures')]
-    private ?couleur $couleur = null;
+    private ?Couleur $couleur = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $catVoitures = null;
@@ -209,24 +209,24 @@ class Voitures
         return $this;
     }
 
-    public function getMarque(): ?marque
+    public function getMarque(): ?Marque
     {
         return $this->marque;
     }
 
-    public function setMarque(?marque $marque): static
+    public function setMarque(?Marque $marque): static
     {
         $this->marque = $marque;
 
         return $this;
     }
 
-    public function getCouleur(): ?couleur
+    public function getCouleur(): ?Couleur
     {
         return $this->couleur;
     }
 
-    public function setCouleur(?couleur $couleur): static
+    public function setCouleur(?Couleur $couleur): static
     {
         $this->couleur = $couleur;
 
