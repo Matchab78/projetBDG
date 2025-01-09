@@ -13,6 +13,16 @@
     <div class="connexion mr-3">
     <a href="{{ path('app_login') }}"><img src="{{asset('css/images/connexion.png')}}" class="co-img" width="45px" ></a>
     </div>
+    <div class="menu-toggle" onclick="toggleDropdown()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu">
+        <a href="{{ path('app_admin_voitures_index') }}" class="dropdown-item">Admin voiture</a>
+        <a href="{{ path('app_admin_evenement_index') }}" class="dropdown-item">Admin event</a>
+        <a href="{{ path('app_admin_contact_index') }}" class="dropdown-item">Admin contact</a>
+    </div>
 </nav>
 
 <script src="{{asset('script/publicNav.js')}}"></script>
