@@ -14,7 +14,7 @@ class Marque
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $nomMarque;
+    private $nom_marque;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $apropos;
@@ -24,14 +24,14 @@ class Marque
         return $this->id;
     }
 
-    public function getNomMarque(): ?string
+    public function getnom_marque(): ?string
     {
-        return $this->nomMarque;
+        return $this->nom_marque;
     }
 
-    public function setNomMarque(string $nomMarque): self
+    public function setnom_marque(string $nom_marque): self
     {
-        $this->nomMarque = $nomMarque;
+        $this->nom_marque = $nom_marque;
 
         return $this;
     }

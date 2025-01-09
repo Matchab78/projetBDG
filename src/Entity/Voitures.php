@@ -52,6 +52,15 @@ class Voitures
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $co2;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $image2;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $image3;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $image4;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -197,6 +206,42 @@ class Voitures
     public function setCo2(?string $co2): self
     {
         $this->co2 = $co2;
+        return $this;
+    }
+
+    public function getImage2(): ?string
+    {
+        return $this->image2;
+    }
+
+    public function setImage2(?string $image2): self
+    {
+        $this->image2 = $image2;
+
+        return $this;
+    }
+
+    public function getImage3(): ?string
+    {
+        return $this->image3;
+    }
+
+    public function setImage3(?string $image3): self
+    {
+        $this->image3 = $image3;
+
+        return $this;
+    }
+
+    public function getImage4(): ?string
+    {
+        return $this->image4;
+    }
+
+    public function setImage4(?string $image4): self
+    {
+        $this->image4 = $image4;
+
         return $this;
     }
 }
