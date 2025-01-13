@@ -1,67 +1,56 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Voitures{% endblock %}
-
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/catalogue.css') }}">
-{% endblock %}
+{% block title %}Catalogue{% endblock %}
 
 {% block body %}
-<div class="cars-container">
-    {% for voiture in voitures %}
-        <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carte de Vitesse</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="cards-container">
-        <!-- Carte 1 -->
-        <div class="card left">
-            <img src="votre-image1.jpg" alt="Image 1">
-            <div class="progress-container">
-                <div class="label">Vitesse Max:</div>
-                <div class="progress-bar">
-                    <div style="width: 80%;">80 km/h</div>
-                </div>
-                <div class="label">Puissance:</div>
-                <div class="progress-bar">
-                    <div style="width: 65%;">200 CV</div>
-                </div>
-                <div class="label">0 à 100:</div>
-                <div class="progress-bar">
-                    <div style="width: 70%;">7.5s</div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Carte 2 -->
-        <div class="card right">
-            <img src="votre-image2.jpg" alt="Image 2">
-            <div class="progress-container">
-                <div class="label">Vitesse Max:</div>
-                <div class="progress-bar">
-                    <div style="width: 90%;">120 km/h</div>
-                </div>
-                <div class="label">Puissance:</div>
-                <div class="progress-bar">
-                    <div style="width: 80%;">300 CV</div>
-                </div>
-                <div class="label">0 à 100:</div>
-                <div class="progress-bar">
-                    <div style="width: 50%;">5.5s</div>
-                </div>
-            </div>
-        </div>
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/catalogue.css')}}">
+{% endblock %}
+
+<div class="search-container">
+    <input type="text" id="search-bar" placeholder="Rechercher une voiture..." onkeyup="filterCards()">
+    <select id="brand-dropdown" onchange="filterCards()">
+        <option value="">Toutes les marques</option>
+        {% for marque in marques %}
+            <option value="{{ marque.nom_marque }}">{{ marque.nom_marque }}</option>
+        {% endfor %}
+    </select>
+</div>
+
+{% for voiture in voitures %}
+<div class="card" data-brand="{{ voiture.marque ? voiture.marque.nom_marque : '' }}">
+    <h2>{{ voiture.description }}</h2>
+    <img src="{{ asset(voiture.image) }}" alt="Car Image"> {# il faut au plus vite ajouter les vrai image #} 
+    <div class="progress-bar">
+        <div style="width: 45%;"></div>
     </div>
-
-    <script src="catalogue.js"></script>
-</body>
-</html>
+    <p>Speed: {{ voiture.vitesse }} KM/H</p>    
+    <div class="progress-bar">
+        <div style="width: 80%;"></div>
+    </div>
+    <p>Horsepower: {{ voiture.chevaux }} CHV</p>
+    <a href="{{ path('detailVoit', {'id': voiture.id}) }}" class="button" style="text-decoration: none;">Learn More</a>
+</div>
 {% endfor %}
 
-
+<script>
+/**
+ * Filters the displayed cards based on the search input and selected brand.
+ */
+function filterCards() {
+    const searchInput = document.getElementById('search-bar').value.toLowerCase();
+    const selectedBrand = document.getElementById('brand-dropdown').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        const cardText = card.textContent.toLowerCase();
+        const cardBrand = card.getAttribute('data-brand').toLowerCase();
+        if (cardText.includes(searchInput) && (selectedBrand === "" || cardBrand === selectedBrand)) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
 {% endblock %}
