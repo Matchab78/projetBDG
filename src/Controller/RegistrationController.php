@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\RegistrationFormType;
 use App\Security\Authenticator;
-use App\Security\EmailVerifier;
+use SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -20,9 +20,9 @@ use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 
 class RegistrationController extends AbstractController
 {
-    private EmailVerifier $emailVerifier;
+    private VerifyEmailHelperInterface $emailVerifier;
 
-    public function __construct(EmailVerifier $emailVerifier)
+    public function __construct(VerifyEmailHelperInterface $emailVerifier)
     {
         $this->emailVerifier = $emailVerifier;
     }
