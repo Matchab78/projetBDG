@@ -27,6 +27,7 @@
 <link rel="shortcut icon" href="favicon.26242483.ico">
 <link rel="stylesheet" href="https://use.typekit.net/eqx3jwb.css">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/base.98fd6c19.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/rasso.css') }}">
 
 <section>
 <main>
@@ -64,10 +65,20 @@
                 <p><strong>Adresse:</strong> {{ event.rue }}, {{ event.cp }} {{ event.ville }}</p>
                 <p><strong>Description:</strong> {{ event.description }}</p>
                 <p><strong>Places disponibles:</strong> {{ event.places }}</p>
+                
+                <button class="btn-participer" onclick="participer('{{ event.id }}')">Participer</button>
             </div>
         {% endfor %}
     </div>
 </section>
+
+<script>
+    function participer(eventId) {
+        alert("Vous participez à l'événement ID: " + eventId);
+        // Ici, tu peux ajouter un appel AJAX pour enregistrer la participation
+    }
+</script>
+
 
 
         {# <svg class="cursor" width="80" height="80" viewBox="0 0 80 80">

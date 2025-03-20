@@ -9,13 +9,13 @@
     justify-content: space-between;
     height: 80px;
     z-index: 1000;
-    background-color: black;
-    transition: background-color 0.3s ease;
+    background-color: transparent; /* Supprime le fond noir */
 }
 
-.navbar-transparent {
+
+/* .navbar-transparent {
     background-color: transparent !important;
-}
+} */
 
 .logo-img {
     height: 200%;
@@ -23,9 +23,6 @@
     width: auto;
 }
 
-/* .co-img{
-    width: 50px;
-} */
 
 .nav-links {
     display: flex;
