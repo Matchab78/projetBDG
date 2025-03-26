@@ -22,15 +22,13 @@
 
     </head>
     <body class="{% block body_class %}{% endblock %}">
-    {% include 'navbar/publicNav.html.twig' %}
 
     {% if is_granted('ROLE_ADMIN') %}
             {% include 'navbar/NavAdmin.html.twig' %}
-        {% elseif is_granted('ROLE_ENTREPRISE') %}
-            {% include 'navbar/publicNav.html.twig' %}
         {% else %}
             {% include 'navbar/publicNav.html.twig' %}
         {% endif %}
+        
         {% block body %}{% endblock %}
     {# {% include 'script/publicNav.js' %} #}
     </body>
